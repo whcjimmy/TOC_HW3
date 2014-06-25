@@ -21,7 +21,7 @@ public class TocHw3
 	InputStream reader = url.openStream();
 	JSONArray add = new JSONArray(new JSONTokener(reader)); //put json data into jsonarray
 
-	Pattern pattern = Pattern.compile(".*"+args[1]+args[2]+".*"); 
+	Pattern pattern = Pattern.compile(".*"+args[2]+".*"); 
 	Matcher matcher;
 
 	avg_price = count = 0;
@@ -35,6 +35,7 @@ public class TocHw3
 	    if(matcher.find() && (obj.getString("鄉鎮市區").equals(args[1])))
 		if((obj.getInt("交易年月")) > years) //if the year is older than the input year
 		{
+	System.out.println(str);
 		    count++;
 		    avg_price += obj.getInt("總價元");
 		}
