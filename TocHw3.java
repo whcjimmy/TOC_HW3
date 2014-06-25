@@ -35,7 +35,6 @@ public class TocHw3
 	    if(matcher.find() && (obj.getString("鄉鎮市區").equals(args[1])))
 		if((obj.getInt("交易年月")) > years) //if the year is older than the input year
 		{
-	System.out.println(str);
 		    count++;
 		    avg_price += obj.getInt("總價元");
 		}
